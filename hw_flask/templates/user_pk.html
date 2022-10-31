@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for user in users %}
+{% if user['pk'] == uid %}
+<img src="https://cdn-icons-png.flaticon.com/512/149/149071.png">
+<pre>
+    <p>Имя кандитата - {{user['name']}}</p>
+    <p>Позиция кандидата - {{user['position']}}</p>
+    <p>Навыки: {{user['skills']}}</p>
+</pre>
+{% endif %}
+{% endfor %}
+</body>
+</html>

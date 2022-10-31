@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for user in users %}
+{% if (uid.lower() in user['skills']) or (uid.title() in user['skills']) %}
+<pre>
+    <p>Имя кандитата - {{user['name']}}</p>
+    <p>Позиция кандидата - {{user['position']}}</p>
+    <p>Навыки: {{user['skills']}}</p>
+</pre>
+{% endif %}
+{% endfor %}
+</body>
+</html>
